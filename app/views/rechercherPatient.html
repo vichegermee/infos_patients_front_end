@@ -1,0 +1,45 @@
+<div class="contenur-recherche">
+	<div class="row">
+		<div class="col-xs-12 title2 center">
+			RECHERCHER LE(S) PATIENT(S)
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 title2">
+			<div class="content">
+				<form class="form">
+					<div class="form-group">
+						<label>Entrez le NIR du patient:</label><br> <input
+							type="text" class="form-control" data-ng-model="nirOdPatient">
+					</div>
+					<div class="center">
+						<button type = "submit" data-ng-click="save()" class="btn btn-primary">
+							Search
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="contenur-resultat" data-ng-repeat="patient in patients">
+		<div class="content row">
+			<div class="col-xs-4">
+				{{patient.nom}} {{patient.prenomPt}}
+			</div>
+			<div class="col-xs-3 col-xs-offset-5">
+				<a data-ng-href="#/searchDetailsPatient/{{patient.identifiant}}" class="boutonsRedirection">
+					<span class="glyphicon glyphicon-list-alt"></span>
+				</a>
+				<a data-ng-href="#/modifierPatient" class="boutonsRedirection">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</a>
+				<a data-ng-href="#/supprimerPatient" class="boutonsRedirection">
+					<span class="glyphicon glyphicon-trash"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+

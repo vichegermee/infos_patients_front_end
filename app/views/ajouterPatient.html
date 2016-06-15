@@ -1,0 +1,203 @@
+<div class="conteneur-ajouter">
+		<div class="row content">
+			<form name="form" novalidate>
+				<div class="col-xs-12 espacement"> 
+					<div class="row">
+						<div class="col-xs-6">
+							<input type="text" placeholder="NIR_OD" data-ng-model="nirOd" name="pNirOd" required="" /> 
+						</div>
+						<div class="col-xs-6">
+							<div data-ng-show="form.$submitted || form.pNirOd.$touched">
+								<span data-ng-show="form.pNirOd.$error.required" class="text-danger">
+									Renseignez le NIR_OD
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 espacement">
+					<div class="row">
+						<div class="col-xs-6">
+							<input type="text" placeholder="nom" data-ng-model="nom" name="pNom" required="" />
+						</div>
+						<div class="col-xs-6">
+							<div data-ng-show="form.$submitted || form.pNom.$touched">
+								<span data-ng-show="form.pNom.$error.required" class="text-danger">
+									Renseignez un nom
+								</span>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 espacement">
+					<div class="row">
+						<div class="col-xs-6">
+							<input type="text" placeholder="prénom" data-ng-model="prenom" name="pPrenom" required="" />
+						</div>
+						<div class="col-xs-6">
+							<div data-ng-show="form.$submitted || form.pPrenom.$touched">
+								<span data-ng-show="form.pPrenom.$error.required" class="text-danger">
+									Renseignez un prénom
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 espacement">
+					<div class="row">
+						<div class="col-xs-6">
+							<input type="text" placeholder="Date de naissance(JJ/MM/AAAA)" data-ng-model="dateNaiss" name="pDateNaiss" required="" />
+						</div>
+						<div class="col-xs-6">
+							<div data-ng-show="form.$submitted || form.pDateNaiss.$touched">
+								<span data-ng-show="form.pDateNaiss.$error.required" class="text-danger">
+									Renseignez la date de naissance
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 espacement">
+					<div class="row">
+						<div class="col-xs-6">
+							<input type="number" placeholder="rang" data-ng-model="rang" name="pRang"	required="" /> 
+						</div>
+						<div class="col-xs-6">
+							<div data-ng-show="form.$submitted || form.pRang.$touched">
+								<span data-ng-show="form.pRang.$error.required" class="text-danger">
+									1: homme, 2: femme
+								</span>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 espacement">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="row">
+								<div class="col-xs-4">
+									Caisse:
+								</div>
+								<div class="col-xs-8">
+	    							<select id="listeCaisses" data-ng-model="caisse" class="select" name="pCaisse"
+								          data-ng-options="caisse.lib_caisse for caisse in caisses | orderBy: orderPropCaisses" required="">
+								    </select>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div data-ng-show="form.$submitted || form.pCaisse.$touched">
+								<span data-ng-show="form.pCaisse.$error.required" class="text-danger" ng-repeat="caisse in caisses">
+									le champs de la caisse est vide {{caisse.id_caisse}}
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 espacement">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="row">
+								<div class="col-xs-4">
+									Régime:
+								</div>
+								<div class="col-xs-8">
+	    							<select id="listeRegimes" data-ng-model="regime" class="select" name="pRegime"
+								          data-ng-options="regime as (regime.idreg+ ' | ' +regime.libreg) for regime in regimes" required="">
+								    </select>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div data-ng-show="form.$submitted || form.pRegime.$touched">
+								<span data-ng-show="form.pRegime.$error.required" class="text-danger">
+									le champs du régime est vide
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 espacement"> 
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="row">
+								<div class="col-xs-4">
+									MT :
+								</div>
+								<div class="col-xs-8">
+	    							<select id="listeMedecins" data-ng-model="mt" class="select" name="pMt"
+								          data-ng-options="medecin as (medecin.nom_mt+' '+medecin.prenom_mt) for medecin in medecins | orderBy: orderPropMt " required="">
+								    </select>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div data-ng-show="form.$submitted || form.pMt.$touched">
+								<span data-ng-show="form.pMt.$error.required" class="text-danger">
+									Renseignez le médecin traitant du patient
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row ">
+						<div class="col-xs-12 DecalerLaLigne">
+							Avez-vous : 
+						</div>
+						<div class="row espacement">
+							<div class="col-xs-offset-2 col-xs-10">
+							Des droits à la date du jour ? : 
+								<input type="radio" data-ng-model="ddt" value="ddtOui" />
+									oui
+								<input type="radio" data-ng-model="ddt" value="ddtNon" />
+									non
+							</div>
+						</div>
+						<div class="row espacement">
+							<div class="col-xs-offset-2 col-xs-10">
+							une CMUC ? : 
+								<input type="radio" data-ng-model="cmuc" value="cmucOui" />
+									oui
+								<input type="radio" data-ng-model="cmuc" value="cmucNon" />
+									non
+							</div>
+						</div>
+						<div class="row espacement">
+							<div class="col-xs-offset-2 col-xs-10">
+							un AME ? : 
+								<input type="radio" data-ng-model="ame" value="ameOui" />
+									oui
+								<input type="radio" data-ng-model="ame" value="ameNon" />
+									non
+							</div>
+						</div>
+						<div class="row espacement">
+							<div class="col-xs-offset-2 col-xs-10">
+							une éxonération ? : 
+								<input type="radio" data-ng-model="exoneration" value="exonerationOui" />
+									oui
+								<input type="radio" data-ng-model="exoneration" value="exonerationNon" />
+									non
+							</div>
+						</div>
+						<div class="row espacement">
+							<div class="col-xs-offset-2 col-xs-10">
+							une ACS ? : 
+								<input type="radio" data-ng-model="acs" value="acsOui" />
+									oui
+								<input type="radio" data-ng-model="acs" value="acsNon" />
+									non
+							</div>
+						</div>
+				</div>
+				<div class="row center">
+					<button data-ng-click="save(patient)" class="btn btn-primary">
+							Save
+					</button>
+					<button data-ng-click="reset(form)" class="btn btn-primary">
+							Reset
+					</button>
+				</div>
+			</form>
+	</div>
+</div>

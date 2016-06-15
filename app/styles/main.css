@@ -1,0 +1,289 @@
+.browsehappy {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+/* REGLES GENERIQUES */
+body {
+	padding: 1.4em;
+	font-family: Verdana;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.btn-primary {
+	background-color: #008080;
+	color: #fff;
+}
+
+.btn-primary:hover {
+	background-color: #006060;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header, .marketing, .footer {
+	padding-left: 0.95em;
+	padding-right: 0.95em;
+}
+
+/* Custom page header */
+.header {
+	border-bottom: 0.0625em solid #e5e5e5;
+	margin-bottom: 0.3125em;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 2.45em;
+	padding-bottom: 1.2em;
+}
+
+/* Custom page footer */
+.footer {
+	padding-top: 1.2em;
+	color: #777;
+	border-top: 0.0625em solid #e5e5e5;
+}
+
+.container-narrow>hr {
+	margin: 1.875em 0;
+}
+
+.title2 {
+	font-size: 1.25em;
+	color: #000000;
+	margin-top: 0.625em;
+	margin-bottom: 0.625em;
+}
+
+.title1 {
+	font-size: 1.875em;
+	font-family: Verdana;
+	color: #008080;
+	margin-top: 0.3125;
+	margin-left: 6.125em;
+	letter-spacing: -0.125em;
+}
+
+.boutonsRedirection {
+	letter-spacing: 0.125em;
+	color: #008080;
+}
+
+.ajouterPatient {
+	margin-top: 0.625em;
+	color: #008080;
+	font-size: 1.875em;
+	float: right;
+}
+
+.formeCracteres {
+	text-decoration: none;
+	color: #000000;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+	text-align: center;
+	border-bottom: 0.0625em solid #e5e5e5;
+}
+
+.jumbotron .btn {
+	font-size: 1.3em;
+	padding: 0.875em 1.5em;
+}
+
+/* Supporting marketing content */
+.marketing {
+	margin: 2.45em 0;
+}
+
+.marketing p+h4 {
+	margin-top: 1.8em;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 48em) {
+	.container {
+		max-width: 127em;
+	}
+
+	/* Remove the padding we set earlier */
+	.header, .marketing, .footer {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	/* Space out the masthead */
+	.header {
+		margin-bottom: 2em;
+	}
+	/* Remove the bottom border on the jumbotron for visual effect */
+	.jumbotron {
+		border-bottom: 0;
+	}
+}
+
+.content {
+	width: 31.25em;
+	border: 0.0625em solid #dedede;
+	padding: 1.25em ;
+	border-radius: 0.3125em;
+	margin: auto auto auto;
+}
+
+.center {
+	text-align: center;
+}
+
+.color-box {
+	height: 6.25em;
+	width: 6.25em;
+	border: 0.0625em solid black;
+	border-radius: 0.1875;
+	padding: 1.875em 0.625em 0.625em 0.625em;
+	font-weight: bold;
+	text-align: center;
+	margin: 1.25em auto auto auto;
+}
+
+.red {
+	/*background-color: #ff0000;*/
+	color: #1e1e1e;
+}
+
+.green {
+	background-color: #00ff00;
+}
+
+.blue {
+	/*background-color: #0099FF;*/
+	color: #fff;
+}
+
+.positionSpan {
+	margin-bottom: 0.375em;
+}
+
+.positionNomPatient {
+	margin-top: 0.625em;
+}
+
+#player button {
+	background: -moz-linear-gradient(0% 100% 90deg, rgba(166, 172, 176, 0.5),
+		rgba(242, 242, 242, 0.5));
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(242, 242, 242, 0.5)),
+		to(rgba(166, 172, 176, 0.5))),
+		-webkit-gradient(radial, 25 15, 45, 25 15, 20, from(rgba(50, 50, 50, 0.1
+		)), to(rgba(255, 255, 255, 1)));
+	border: 0;
+	border-radius: 1.5em;
+	-moz-border-radius: 1.5em;
+	-webkit-border-radius: 1.5em;
+	-webkit-box-shadow: inset 0em 0em 0.1875em #eee, 0 0 0.125em 0 #111, 0 0.0625em 0.0625em 0
+		#eee;
+	color: #222;
+	font-family: "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: normal;
+	height: 2.45em;
+	line-height: 1;
+	padding: 0.5em 0 0.8em 0.0625em;
+	text-align: center;
+	text-shadow: 0em 0.0625em 0em #fff;
+	width: 2.45em;
+}
+
+/* ECRAN RECHERCHE PATIENT */
+.contenur-recherche {
+	padding: 0.625em;
+	background-color: #D3D3D3;
+	margin-top: -1.875em;
+}
+
+.conteneur-resultat{
+	padding: 0.625em;
+	background-color: #D3D3D3;
+}
+.contenur-recherche .content {
+	background-color: #fff;
+}
+
+/*ECRAN DETAILS PATIENT*/
+.conteneur-details {
+	background-color: #D3D3D3;
+	margin-top: -1.8em;
+	padding-bottom: 1.25em;
+}
+
+.conteneur-details>div #player {
+	margin-top: 0.3125em;
+}
+
+.conteneur-details .content {
+	background-color: #FFFFFF;
+}
+
+.conteneur-details .text-min{
+	font-weight: lighter ;
+}
+
+.conteneur-details .row{
+	margin-bottom: 0em;
+}
+
+.conteneur-details .title2{
+	padding-top: 0.95em;
+}
+
+/*ECRAN AJOUTER PATIENT*/
+
+.conteneur-ajouter{
+	background-color: #D3D3D3;
+	margin-top: -1.8em;
+	padding-bottom: 1.25em;
+	padding-top: 1.25em;
+}
+
+.conteneur-ajouter .espacement{
+	margin-bottom: 0.625em;
+}
+
+.conteneur-ajouter .content{
+		background-color: #FFFFFF;
+}
+
+.conteneur-ajouter .text-danger{
+	font-size: 0.625em;
+}
+
+.conteneur-ajouter .select{
+	width: 200%;
+}
+
+.conteneur-ajouter .DecalerLaLigne{
+	padding-left: 2em;
+}
+
+/* D3 */
+
+.axis path,
+.axis line {
+ fill: none;
+ stroke: #000;
+ shape-rendering: crispEdges;
+}
+
+.x.axis path {
+ display: none;
+}
+
+.line {
+ fill: none;
+ stroke: steelblue;
+ stroke-width: 1.5px;
+}

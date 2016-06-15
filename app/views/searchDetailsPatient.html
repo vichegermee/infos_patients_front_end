@@ -1,0 +1,67 @@
+
+<div class="conteneur-details">
+		<div class="title2 center">INFORMATIONS PATIENT</div>
+	<div class="content row">
+		<label class="col-xs-12">
+			Nom : <span class="text-min">{{detailspatients.nom}}</span>
+		</label> 
+		<label class="col-xs-12">
+			Prénom : <span class="text-min">{{detailspatients.prenomPt}}</span>
+		</label> 
+		<label class="col-xs-12">
+			Date de	naissance : <span class="text-min">{{detailspatients.dateNaiss | date:'fullDate'}}</span>
+		</label> 
+		<label class="col-xs-12">
+			NirOd : <span class="text-min"> {{detailspatients.nirOd}} </span>
+		</label> 
+		<label class="col-xs-12">
+			Rang : <span class="text-min">{{detailspatients.rang}}</span>
+		</label>
+		<label class="col-xs-12">
+			Caisse : <span class="text-min">{{detailspatients.caisse.lib_caisse}}</span>
+			
+		</label>
+		<label class="col-xs-12">
+			 Régime : <span class="text-min">{{detailspatients.regime.lib_reg}}</span>
+		</label>  
+		<label data-ng-if="detailspatients.exoneration" class="col-xs-12">
+			Exoneration : <span class="text-min">oui</span>
+		</label> 
+		<label data-ng-if="!detailspatients.exoneration" class="col-xs-12">
+			Exoneration : <span class="text-min">non</span>
+		</label> 
+		<label data-ng-if="detailspatients.acs" class="col-xs-12">
+			ACS : <span class="text-min">oui</span>
+		</label> 
+		<label data-ng-if="!detailspatients.acs" class="col-xs-12">
+			ACS : <span class="text-min">non</span>
+		</label> 
+		<label data-ng-if="detailspatients.cmuc" class="col-xs-12">
+			CMUC : <span class="text-min">oui</span>
+		</label> 
+		<label data-ng-if="!detailspatients.cmuc" class="col-xs-12">
+			CMUC : <span class="text-min">non</span>
+		</label>
+		<label data-ng-if="detailspatients.ame" class="col-xs-12">
+			AME : <span class="text-min">oui</span>
+		</label>
+		<label data-ng-if="!detailspatients.ame" class="col-xs-12">
+			AME : <span class="text-min">non</span>
+		</label>
+		<label data-ng-if="detailspatients.ddt" class="col-xs-12">
+			Droit à la date du jour : <span class="text-min">oui</span>
+		</label> 
+		<label data-ng-if="!detailspatients.ddt" class="col-xs-12">
+			Droit à la date du jour : <span class="text-min">non</span>
+		</label>
+		<label class="col-xs-12">
+			Médecin	traitant (MT) : <span class="text-min">{{detailspatients.mt.nom_mt}}  {{detailspatients.mt.prenom_mt}}</span>
+		</label> 
+		<label class="col-xs-12">
+			Téléphone MT : <span class="text-min">{{detailspatients.mt.num_tel_mt}} </span>
+		</label> 
+		<label class="col-xs-12">
+			Adresse MT : <span class="text-min">{{detailspatients.mt.adresse_mt}}</span>
+		</label> 
+	</div>
+</div>
